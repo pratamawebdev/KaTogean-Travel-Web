@@ -1,0 +1,366 @@
+:root {
+  --pr-color: #eebbc3;
+  --sec-color: #232946;
+  --thr-color: #fffffe;
+  --for-color: #b8c1ec;
+  --fif-color: #121629;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--thr-color);
+}
+
+/* Navbar Start */
+
+.brand-text-custom {
+  color: var(--pr-color);
+}
+
+.brand-text-custom:hover {
+  color: var(--thr-color);
+}
+
+.brand-text-custom span {
+  color: var(--thr-color);
+}
+
+.brand-text-custom span:hover {
+  color: var(--pr-color);
+}
+
+.navbar-nav-custom li a {
+  color: var(--thr-color);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.navbar-nav-custom li a:hover {
+  border-bottom: 4px solid var(--pr-color);
+  color: var(--thr-color);
+}
+
+nav .login-btn-custom {
+  font-weight: bold;
+  padding: 6px 25px;
+  background-color: var(--pr-color);
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+nav .login-btn-custom:hover,
+nav .login-btn-custom:hover:focus,
+nav .login-btn-custom:hover:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.navbar {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.navbar.scrolling-active {
+  background-color: #232946;
+  padding: 15px 0;
+}
+
+.navbar-bg-custom .scrolling-active {
+  background-color: var(--sec-color);
+  padding: 15px 0;
+}
+
+.navbar-toggler {
+  color: var(--thr-color);
+}
+
+/* Navbar End */
+
+/* Home - Carousel Start */
+
+#carouselExampleAutoplaying img {
+  filter: brightness(45%);
+  min-width: fit-content;
+}
+
+#carouselExampleAutoplaying h1 {
+  font-size: 5rem;
+}
+
+.carousel-custom h2 {
+  --animate-delay: 0.7s;
+}
+
+.carousel-custom p {
+  --animate-delay: 1.2s;
+}
+
+.carousel-about-btn {
+  background-color: var(--pr-color);
+  border: 1px solid var(--pr-color);
+  color: var(--fif-color);
+  --animate-delay: 1.7s;
+}
+
+.carousel-about-btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--pr-color);
+  color: var(--pr-color);
+}
+
+.carousel-book-btn {
+  background-color: transparent;
+  border: 1px solid var(--pr-color);
+  color: var(--pr-color);
+  --animate-delay: 1.7s;
+}
+
+.carousel-book-btn:hover {
+  background-color: var(--pr-color);
+  border: 1px solid var(--pr-color);
+  color: var(--fif-color);
+}
+
+/* Home - Carousel End */
+
+/* Booking Start */
+
+.tour-booking {
+  background-color: var(--for-color);
+}
+
+.booking-btn-custom {
+  background-color: var(--fif-color);
+  color: var(--pr-color);
+  border: unset;
+  font-weight: bold;
+}
+
+.booking-btn-custom:hover {
+  animation: shakeAnimation 0.4s forwards;
+}
+
+@keyframes shakeAnimation {
+  20% {
+    transform: translateX(20px);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* Booking End */
+
+/* About Start */
+
+.about-title-custom {
+  color: var(--sec-color);
+}
+
+.about-btn-custom:hover {
+  background-color: #eebbc3;
+}
+
+.about-btn-custom:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+/* Section Start */
+
+.section-first-title {
+  font-weight: 700;
+  color: var(--sec-color);
+}
+
+.section-sec-title {
+  font-weight: bold;
+  color: var(--pr-color);
+}
+
+/* Section End */
+
+/* Button Start */
+
+.main-btn-custom {
+  background-color: #eebbc3;
+  box-shadow: 0 5px 0 #be8f99;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 20px;
+  color: var(--fif-color);
+  font-weight: 700;
+  width: 200px;
+  text-align: center;
+}
+
+.main-btn-custom:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.sec-btn-custom,
+.third-btn-custom {
+  background-color: var(--fif-color);
+  display: inline-block;
+  padding: 8px 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--pr-color);
+  font-weight: 700;
+  width: 140px;
+  text-align: center;
+  transition: scale 0.3 ease-in-out;
+}
+
+.sec-btn-custom:hover,
+.third-btn-custom:hover {
+  scale: 1.1;
+}
+
+/* Button End */
+
+/* Destination Start */
+
+.destination-custom img {
+  transition: all 1.3s ease;
+}
+
+.destination-custom img:hover {
+  transform: scale(1.2);
+}
+
+/* Destination End */
+
+/* Service Start */
+
+.services img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.col-services h5 {
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.services i {
+  color: green;
+  font-size: 30px;
+}
+
+/* Service End */
+
+/* Packages Start */
+
+.package-custom {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  transition: 0.5s ease-in-out;
+}
+
+.card-packages-font {
+  color: grey;
+}
+
+/* Packages End */
+
+/* Gallery Start */
+
+.gallery img {
+  opacity: 0.8;
+  transition: all 0.2s ease-in;
+}
+
+.gallery img:hover {
+  opacity: 1;
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Gallery End */
+
+/* Contact-Us Start */
+
+.contact-us {
+  background-color: var(--for-color);
+}
+
+.contact-sec-title {
+  font-weight: bold;
+  color: var(--thr-color);
+}
+
+.contact-us-custom {
+  color: var(--pr-color);
+  border: none;
+  background-color: var(--fif-color);
+  transform: scale(0.95);
+  transition: 0.1s ease-in-out;
+  font-weight: 500;
+}
+
+.contact-us-custom:hover {
+  color: var(--pr-color);
+  background-color: var(--fif-color);
+  transform: scale(0.98);
+}
+
+/* Contact-Us End */
+
+/* Footer Start */
+
+footer {
+  background-color: var(--fif-color);
+}
+
+footer h5 {
+  color: var(--pr-color);
+  font-weight: 700;
+}
+
+footer p,
+footer p a,
+footer hr {
+  color: var(--thr-color);
+}
+
+.icon {
+  color: var(--thr-color);
+  font-size: 40px;
+}
+
+.icon-sosmed {
+  color: var(--thr-color);
+  font-size: 25px;
+}
+
+.footer-sosmed-icons i,
+.footer-payment-icon i {
+  margin-right: 10px;
+}
+
+/* Footer End */

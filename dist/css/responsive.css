@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+  #carouselExampleAutoplaying h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .services img {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 922px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 350px) {
+}
