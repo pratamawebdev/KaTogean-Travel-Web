@@ -1,0 +1,317 @@
+:root {
+  --pr-color: #eebbc3;
+  --sec-color: #232946;
+  --thr-color: #fffffe;
+  --for-color: #b8c1ec;
+  --fif-color: #121629;
+  --ext-color: rgb(242, 243, 243);
+  --ext2-color: rgb(104, 113, 118);
+}
+
+.button {
+  list-style: none;
+  background-color: gold;
+  padding: 12px 20px;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.filter {
+  background-color: aquamarine;
+}
+
+.modal-dialog {
+  max-width: 1050px;
+}
+
+.filter-toggler {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.filter-toggler svg {
+  font-size: 1.4em;
+  transition: transform ease-in-out 0.5s;
+}
+
+.card-filter {
+  position: relative;
+  height: 130px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  background-color: var(--sec-color);
+  color: var(--thr-color);
+}
+
+.card-filter.active {
+  height: 320px;
+}
+
+.card-filter.active .filter-toggler svg {
+  transform: rotate(-180deg);
+}
+
+.card-filter .card-body {
+  overflow: hidden;
+  height: 100px;
+}
+
+.card-filter1 {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  background-color: var(--sec-color);
+  color: var(--thr-color);
+}
+
+.card-filter1.active {
+  height: 150px;
+}
+
+.card-filter1.active .filter-toggler svg {
+  transform: rotate(-180deg);
+}
+
+.card-filter1 .card-body {
+  overflow: hidden;
+  height: 100px;
+}
+
+.card-filter2 {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  background-color: var(--sec-color);
+  color: var(--thr-color);
+}
+
+.card-filter2.active {
+  height: 300px;
+}
+
+.card-filter2.active .filter-toggler svg {
+  transform: rotate(-180deg);
+}
+
+.card-filter2 .card-body {
+  overflow: hidden;
+  height: 100px;
+}
+
+.nav-filter {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-filter li {
+  list-style: none;
+}
+
+.nav-filter input {
+  margin-right: 30px;
+}
+
+.container-category {
+  max-width: 950px;
+  background-color: transparent;
+  border: none;
+}
+
+.booked {
+  padding-top: 100px;
+}
+
+.booked li .before-page-bc {
+  text-decoration: none;
+  color: var(--thr-color);
+  font-weight: bold;
+}
+
+.booked .now-page-bc {
+  text-decoration: none;
+  color: var(--fif-color);
+}
+
+.booked-ganti-btn {
+  background-color: var(--fif-color);
+  display: inline-block;
+  padding: 1px 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--pr-color);
+  font-weight: 700;
+  width: 100px;
+  text-align: center;
+  transition: scale 0.3 ease-in-out;
+  height: 50px;
+}
+
+.ganti-btn:hover {
+  scale: 1.1;
+}
+
+.search-info {
+  font-weight: 500;
+}
+
+.category-card {
+  background-color: var(--sec-color);
+  color: var(--thr-color);
+}
+
+.bi-info-circle {
+  margin-right: 10px;
+}
+
+.dc-border {
+  background-color: var(--pr-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-title button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 17px 0 35px 12px;
+}
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+}
+.field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 15px;
+  margin-left: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #999;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+.price-input .separator {
+  width: 130px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  height: 5px;
+  position: relative;
+  background: #ddd;
+  border-radius: 5px;
+}
+.slider .progress {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background: greenyellow;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #17a2b8;
+  pointer-events: auto;
+  appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #17a2b8;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-price {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.card-body-price {
+  margin-top: 130px;
+}
+
+.rating-card {
+  margin-bottom: 20px;
+}
+
+.category-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.list-group-item {
+  background-color: var(--sec-color);
+}
+
+.card-discount {
+  border: none;
+  background-color: transparent;
+}
+
+.second-lg {
+  background-color: var(--ext-color);
+  color: var(--ext2-color);
+}
+
+.card-left {
+  height: 100%;
+}
+
+.card-right {
+  height: 100%;
+}
+
+.sec-info-card {
+  color: var(--for-color);
+  font-size: 15px;
+}

@@ -140,6 +140,11 @@ nav .login-btn-custom:hover:active {
 }
 
 .booking-btn-custom {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   background-color: var(--fif-color);
   color: var(--pr-color);
   border: unset;

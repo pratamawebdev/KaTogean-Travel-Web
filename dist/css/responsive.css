@@ -10,11 +10,28 @@
   }
 }
 
-@media screen and (max-width: 922px) {
+@media screen and (max-width: 767px) {
+  .card-left {
+    display: none;
+  }
+
+  .category-img img {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .card-left {
+    display: none;
+  }
+
+  .card-right {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 1024px) {
+  .category-img img {
+    height: 100%;
+  }
 }

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark-light">
+    <!-- Title Page -->
+    <title>KaTogean Travel</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome - Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate CSS & AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Favicon -->
+    <link rel="shorcut icon" href="Assets/Icon/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/css/booking.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/responsive.css">
+</head>
+
+
+<style>
+    body {
+        background-color: #b8c1ec;
+    }
+
+    .booked {
+        width: 100vh;
+        height: 100vh;
+    }
+
+    #filter-buttons button {
+        border-radius: 3px;
+        background: #fffffe;
+        border-color: transparent;
+    }
+
+    #filter-buttons button:hover {
+        background: #be8f99;
+    }
+
+    #filter-buttons button.active {
+        color: #fff;
+        background: #eebbc3;
+    }
+
+    #filterable-cards .card.hide {
+        display: none;
+    }
+</style>
+
+<body>
+
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom animate__animated animate__fadeInDown">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 brand-text-custom" href="#">Ka<span>Togean</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center navbar-nav-custom">
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" aria-current="page" href="#carouselExampleAutoplaying">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" href="#destination">Destination</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" href="#packages">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <a class="login-btn-custom" href="#" type="button">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <main>
+        <!-- Start Section Booked -->
+
+        <section id="booked" class="booked container-xl w-100 vh-100">
+            <nav class="pt-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item before-page-bc"><a class="before-page-bc" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active now-page-bc" aria-current="page">Booking</li>
+                </ol>
+            </nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col d-flex justify-content-between mt-3 mb-3">
+                        <div class="flex-column search-info">
+                            <p>Search results for the availability of destinations in the Togean Islands national park
+                            </p>
+                            <p>Anytime</p>
+                        </div>
+                        <button class="booked-ganti-btn" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Change</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" class="row">
+                                            <div class="col-lg mb-3 mb-lg-0">
+                                                <label for="">Destination*</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Find a destination">
+                                            </div>
+                                            <div class="col-lg mb-3 mb-lg-0">
+                                                <label for="">Check In*</label>
+                                                <input type="date" class="form-control" placeholder="Date">
+                                            </div>
+                                            <div class="col-lg mb-3 mb-lg-0">
+                                                <label for="">Check Out*</label>
+                                                <input type="date" class="form-control" placeholder="Date">
+                                            </div>
+                                            <div class="col-lg mb-3 mb-lg-0">
+                                                <label for="">Pax Number*</label>
+                                                <input type="number" class="form-control" placeholder="No of people">
+                                            </div>
+                                            <div
+                                                class="col-lg mb-3 mb-lg-0 d-flex g-4 align-content-center justify-content-center">
+                                                <a class="rounded-2 px-lg-3 booking-btn-custom"
+                                                    href="booking.html">Check
+                                                    Availability</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-4 pt-2 card-left">
+                        <div class="row d-flex flex-column gap-2">
+                            <div class="col d-flex flex-column align-items-center justify-content-center gap-2">
+                                <div class="card card-filter" style="width: 100%;">
+                                    <div class="card-body">
+                                        <p class="card-title">Sort Results</p>
+                                        <p class="sec-info-card">
+                                            Sort your search results by:</p>
+                                        <hr>
+
+                                        <form class="nav-filter gap-4">
+                                            <label for="">
+                                                <input type="radio" name="sort" value="highest-price">
+                                                Highest Price
+                                            </label>
+                                            <label for="">
+                                                <input type="radio" name="sort" value="lower-price">
+                                                Lowest Price
+                                            </label>
+                                            <label for="">
+                                                <input type="radio" name="sort" value="review-score">
+                                                Review Score
+                                            </label>
+                                            <label for="">
+                                                <input type="radio" name="sort" value="highest-popularity">
+                                                Highest Popularity
+                                            </label>
+                                        </form>
+
+                                    </div>
+                                    <div class="filter-toggler">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-file-arrow-down" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5z" />
+                                            <path
+                                                d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="filter-title">
+                                <button>Filter</button>
+                                <button>Remove Filter</button>
+                            </div>
+
+                            <div class="col d-flex flex-column align-items-center justify-content-center gap-2">
+                                <div class="card card-filter1" style="width: 100%;">
+                                    <div class="card-body">
+                                        <p class="card-title">Booking Policy</p>
+                                        <hr>
+
+                                        <form class="nav-filter gap-4">
+                                            <label for="">
+                                                <input type="checkbox" id="free-cancel" name="booking-policy"
+                                                    value="cancel">
+                                                Free Cancellation
+                                            </label>
+
+                                        </form>
+
+                                    </div>
+                                    <div class="filter-toggler">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-file-arrow-down" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5z" />
+                                            <path
+                                                d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col d-flex flex-column align-items-center justify-content-center gap-2">
+                                <div class="card card-filter2" style="width: 100%;">
+                                    <div class="card-body">
+                                        <p class="card-title">Price Range Per Night</p>
+                                        <hr>
+
+                                        <form class="nav-filter gap-4">
+                                            <div class="price-input">
+                                                <div class="field">
+                                                    <span>Min</span>
+                                                    <input type="number" class="input-min" value="2500">
+                                                </div>
+                                                <div class="separator">-</div>
+                                                <div class="field">
+                                                    <span>Max</span>
+                                                    <input type="number" class="input-max" value="7500">
+                                                </div>
+                                            </div>
+                                            <div class="slider">
+                                                <div class="progress"></div>
+                                            </div>
+                                            <div class="range-input">
+                                                <input type="range" class="range-min" min="0" max="10000" value="2500"
+                                                    step="100">
+                                                <input type="range" class="range-max" min="0" max="10000" value="7500"
+                                                    step="100">
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                    <div class="filter-toggler">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-file-arrow-down" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5z" />
+                                            <path
+                                                d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col d-flex flex-column align-items-center justify-content-center gap-2">
+                                <div class="card card-filter" style="width: 100%;">
+                                    <div class="card-body">
+                                        <p class="card-title">Unit Type</p>
+                                        <p class="sec-info-card">
+                                            All Unit Type</p>
+                                        <hr>
+
+                                        <form class="nav-filter gap-4">
+                                            <label for="">
+                                                <input type="radio" name="unit-type" value="all-unit-type">
+                                                All Unit Type
+                                            </label>
+                                            <label for="">
+                                                <input type="radio" name="unit-type" value="entire-place">
+                                                Entire Place
+                                            </label>
+                                            <label for="">
+                                                <input type="radio" name="unit-type" value="private-room">
+                                                Private Room
+                                            </label>
+
+                                        </form>
+
+                                    </div>
+                                    <div class="filter-toggler">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-file-arrow-down" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5z" />
+                                            <path
+                                                d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-8 col-md-12 d-flex flex-column  align-items-center justify-content-center pt-2 card-right">
+                        <div class="card container-category ">
+                            <div class="alert alert-primary" role="alert">
+                                <i class="bi bi-info-circle"></i> Cheaper if you take a package!
+                            </div>
+
+                            <div id="filter-buttons">
+                                <div class="card card-discount" style="max-width: 100%;">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div
+                                                class="d-flex flex-wrap align-items-center justify-content-center gap-2 filter-category">
+                                                <button class="btn active" data-filter="all">All</button>
+                                                <button class="btn" data-filter="promo">
+                                                    Promo</button>
+                                                <button class="btn" data-filter="beach">
+                                                    Beach</button>
+                                                <button class="btn" data-filter="waterfall">
+                                                    Waterfall</button>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item second-lg">All Prices are final, no booking fee, no
+                                            hidden
+                                            charges</li>
+                                        <li class="list-group-item d-flex flex-row bg-primary-subtle">
+                                            <div class="dc-border d-flex align-items-center justify-content-center">
+                                                <i class="fa-solid fa-percent"></i>
+                                            </div>Stay at all
+                                            places in togean with up to 50% + 30%
+                                            discount at Katogean Travel Fair!
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <form class="d-flex mt-3" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Per room, per night
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Per room, per night</a></li>
+                                            <li><a class="dropdown-item" href="#">Total price</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+
+                                <div id="filterable-cards" class="product mt-4">
+                                    <div class="card mb-4 category-card" data-name="beach" style="max-width: 100%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 category-img">
+                                                <img src="https://i.pinimg.com/564x/7f/54/3d/7f543d2967b167da3bca18c9895ce162.jpg"
+                                                    class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h6 class="card-title mb-3">Togean Islands National Park</h6>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-house"></i>
+                                                            <p class="card-text">Private Villa</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-geo-alt"></i>
+                                                            <p class="card-text">Togean</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2 rating-card">
+                                                            <i class="bi bi-trophy"></i>
+                                                            <p class="card-text">Impressive - 9.5 <span>(342)</span></p>
+                                                        </div>
+                                                        <div class="d-flex flex-row">
+                                                            <i class="bi bi-info-circle"></i>
+                                                            <p>Available around your stay date</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 card-price">
+                                                <div class="card-body card-body-price">
+                                                    <p>Starts from
+                                                        <br>
+                                                        <strong>Rp 185,000</strong>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="card mb-4 category-card" data-name="beach" style="max-width: 100%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 category-img">
+                                                <img src="https://i.pinimg.com/564x/7f/54/3d/7f543d2967b167da3bca18c9895ce162.jpg"
+                                                    class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h6 class="card-title mb-3">Togean Islands National Park</h6>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-house"></i>
+                                                            <p class="card-text">Private Villa</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-geo-alt"></i>
+                                                            <p class="card-text">Togean</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2 rating-card">
+                                                            <i class="bi bi-trophy"></i>
+                                                            <p class="card-text">Impressive - 9.5 <span>(342)</span></p>
+                                                        </div>
+                                                        <div class="d-flex flex-row">
+                                                            <i class="bi bi-info-circle"></i>
+                                                            <p>Available around your stay date</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 card-price">
+                                                <div class="card-body card-body-price">
+                                                    <p>Starts from
+                                                        <br>
+                                                        <strong>Rp 185,000</strong>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="card mb-4 category-card" data-name="beach" style="max-width: 100%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 category-img">
+                                                <img src="https://i.pinimg.com/564x/7f/54/3d/7f543d2967b167da3bca18c9895ce162.jpg"
+                                                    class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h6 class="card-title mb-3">Togean Islands National Park</h6>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-house"></i>
+                                                            <p class="card-text">Private Villa</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-geo-alt"></i>
+                                                            <p class="card-text">Togean</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2 rating-card">
+                                                            <i class="bi bi-trophy"></i>
+                                                            <p class="card-text">Impressive - 9.5 <span>(342)</span></p>
+                                                        </div>
+                                                        <div class="d-flex flex-row">
+                                                            <i class="bi bi-info-circle"></i>
+                                                            <p>Available around your stay date</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 card-price">
+                                                <div class="card-body card-body-price">
+                                                    <p>Starts from
+                                                        <br>
+                                                        <strong>Rp 185,000</strong>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="card mb-4 category-card" data-name="beach" style="max-width: 100%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 category-img">
+                                                <img src="https://i.pinimg.com/564x/7f/54/3d/7f543d2967b167da3bca18c9895ce162.jpg"
+                                                    class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h6 class="card-title mb-3">Togean Islands National Park</h6>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-house"></i>
+                                                            <p class="card-text">Private Villa</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-geo-alt"></i>
+                                                            <p class="card-text">Togean</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2 rating-card">
+                                                            <i class="bi bi-trophy"></i>
+                                                            <p class="card-text">Impressive - 9.5 <span>(342)</span></p>
+                                                        </div>
+                                                        <div class="d-flex flex-row">
+                                                            <i class="bi bi-info-circle"></i>
+                                                            <p>Available around your stay date</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 card-price">
+                                                <div class="card-body card-body-price">
+                                                    <p>Starts from
+                                                        <br>
+                                                        <strong>Rp 185,000</strong>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="card mb-4 category-card" data-name="beach" style="max-width: 100%;">
+                                        <div class="row g-0">
+                                            <div class="col-md-3 category-img">
+                                                <img src="https://i.pinimg.com/564x/7f/54/3d/7f543d2967b167da3bca18c9895ce162.jpg"
+                                                    class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h6 class="card-title mb-3">Togean Islands National Park</h6>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-house"></i>
+                                                            <p class="card-text">Private Villa</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2">
+                                                            <i class="bi bi-geo-alt"></i>
+                                                            <p class="card-text">Togean</p>
+                                                        </div>
+                                                        <div class="d-flex flex-row gap-2 rating-card">
+                                                            <i class="bi bi-trophy"></i>
+                                                            <p class="card-text">Impressive - 9.5 <span>(342)</span></p>
+                                                        </div>
+                                                        <div class="d-flex flex-row">
+                                                            <i class="bi bi-info-circle"></i>
+                                                            <p>Available around your stay date</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 card-price">
+                                                <div class="card-body card-body-price">
+                                                    <p>Starts from
+                                                        <br>
+                                                        <strong>Rp 185,000</strong>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const filterButtons = document.querySelectorAll("#filter-buttons button");
+        const filterableCards = document.querySelectorAll("#filterable-cards .card");
+
+        // Function to filter cards based on filter buttons
+        const filterCards = (e) => {
+            document.querySelector("#filter-buttons .active").classList.remove("active");
+            e.target.classList.add("active");
+
+            filterableCards.forEach(card => {
+                // show the card if it matches the clicked filter or show all cards if "all" filter is clicked
+                if (card.dataset.name === e.target.dataset.filter || e.target.dataset.filter === "all") {
+                    return card.classList.replace("hide", "show");
+                }
+                card.classList.add("hide");
+            });
+        }
+
+        filterButtons.forEach(button => button.addEventListener("click", filterCards));
+    </script>
+
+    <script>
+        // Ambil semua elemen dengan class .card-filter dan .filter-toggler
+        const cards = document.querySelectorAll(".card-filter, .card-filter1, .card-filter2");
+        const togglers = document.querySelectorAll(".filter-toggler");
+
+        // Iterasi melalui setiap tombol dan tambahkan event listener
+        togglers.forEach((toggler, index) => {
+            toggler.onclick = function () {
+                cards[index].classList.toggle('active');
+            };
+        });
+    </script>
+
+    <script>
+        const rangeInput = document.querySelectorAll(".range-input input"),
+            priceInput = document.querySelectorAll(".price-input input"),
+            range = document.querySelector(".slider .progress");
+        let priceGap = 1000;
+        priceInput.forEach(input => {
+            input.addEventListener("input", e => {
+                let minPrice = parseInt(priceInput[0].value),
+                    maxPrice = parseInt(priceInput[1].value);
+
+                if ((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max) {
+                    if (e.target.className === "input-min") {
+                        rangeInput[0].value = minPrice;
+                        range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+                    } else {
+                        rangeInput[1].value = maxPrice;
+                        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+        rangeInput.forEach(input => {
+            input.addEventListener("input", e => {
+                let minVal = parseInt(rangeInput[0].value),
+                    maxVal = parseInt(rangeInput[1].value);
+                if ((maxVal - minVal) < priceGap) {
+                    if (e.target.className === "range-min") {
+                        rangeInput[0].value = maxVal - priceGap
+                    } else {
+                        rangeInput[1].value = minVal + priceGap;
+                    }
+                } else {
+                    priceInput[0].value = minVal;
+                    priceInput[1].value = maxVal;
+                    range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+                    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

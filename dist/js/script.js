@@ -9,6 +9,8 @@ window.addEventListener("scroll", () => {
 
 /* Navbar - Scroll End */
 
+/* Intro Start */
+/*
 let intro = document.querySelector(".intro");
 let logo = document.querySelector(".logo");
 let logoSpan = document.querySelectorAll(".logo-parts");
@@ -35,7 +37,10 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 2300);
   });
 });
+*/
+/* Intro End */
 
+/* Alert Message */
 var myAlert = document.getElementById("myAlert");
 myAlert.style.display = "none";
 
